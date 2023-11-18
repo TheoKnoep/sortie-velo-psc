@@ -1,0 +1,108 @@
+
+
+* {
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	background-color: #EAEAEA;
+	font-family: 'Segoe UI', 'Trebuchet', sans-serif;
+}
+
+main {
+	width: 96%;
+	max-width: 980px;
+	min-height: 100svh;
+	margin:auto; 
+	background-color: #fff;
+	border-radius: 8px;
+
+}
+main > * {
+	margin: 2em;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+
+.track__item {
+    display: grid;
+    grid-template-rows: auto auto;
+	border-radius: 8px;
+	background: #FFF;
+	box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.20);
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+.main-line {
+	display: grid;
+	grid-template-columns: 120px 1fr;
+	padding-bottom: 1em;
+	border-bottom: solid 1px #DCDCDC;
+}
+
+.main-line .map-container {
+	width: 120px;
+	height: 120px; 
+	background-color: #f1f1f1;
+	border-radius: 4px;
+}
+
+.main-line .text-container {
+	margin-left: 1em;
+}
+.main-line .text-container .title {
+	display: flex;
+	align-items: center;
+}
+.main-line .text-container .distance {
+	background-color: #EAEAEA;
+	color: #5E5E5E; 
+	border-radius: 4px;
+	padding: 3px 6px;
+	display: block;
+}
+.main-line .text-container .name {
+	margin-left: 12px;
+	font-weight: lighter;
+}
+.main-line .text-container .description {
+	font-style: italic;
+	margin-top: 1em; 
+}
+
+.main-line .text-container .meta-line {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	margin-top: 1em; 
+}
+
+
+
+.secondary-line {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 1em;
+}
+.secondary-line .button-link {
+	display: block;
+	margin: 6px; 
+	border-radius: 6px;
+	padding: 4px 18px; 
+	height: 38px;
+	color: #fff; 
+	background-color: #3C3C3C;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+}
+.secondary-line .button-link.garmin-connect-link {
+	background-color: #B5D2FF;
+	color: #3E73A6; 
+}

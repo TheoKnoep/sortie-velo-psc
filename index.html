@@ -3,48 +3,41 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PSC traces</title>
+	<title>PSC &mdash; Collection de sorties vélo</title>
+
+	<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+	<main>
+		<h1>Liste des traces :</h1>
+		<div class="filter-block"></div>
+		<div class="tracks-block">
+			<!-- <div class="track__item">
+				<div class="main-line">
+					<div class="map-container"></div>
+					<div class="text-container">
+						<h2 class="title"><span class="distance">86km</span> <span class="name">Forêt de Carnelle</span></h2>
+						<div class="direction">Nord</div>
+						<p class="description">Un trace qui part vers le nord de Paris pour changer un peu, et découvrir de nouveaux coins. Quelques beaux petits raidard, et une belle côte pour faire des test 5’ en montée. Début et fin pas très agréable, mais très belle une fois sorti de la ville.</p>
+						<div class="meta-line">
+							<div class="rdv">Départ : Stalingrad (Paris 19)</div>
+							<div class="elevation">Dénivelé : 960m</div>
+							<div class="score">Difficulté : 112 <span class="more-info">(?)</span></div>
+						</div>
+					</div>
+
+				</div>
+				<div class="secondary-line">
+					<a class="button-link gpx-link" href="#">.GPX</a>
+					<a class="button-link garmin-connect-link" href="#">Garmin Connect</a>
+				</div>
+			</div> -->
+		</div>
+	</main>
 	
-<div class="container"></div>
-	<!-- <div class="track-view">
-		<iframe src="http://localhost/psc-tracks/map/?track=163957087" frameborder="0" width="200" height="200" scrolling="no" style="position: absolute; "></iframe>
-		<div class="mask" style="width: 200px; height: 200px; position: absolute; "></div>
-	</div> -->
 
 
-<script>
-	fetch('synchronize.php')
-		.then(res => res.text()) 
-		.then(text => console.log(text)); 
-
-
-	fetch('data.json')
-		.then(res => res.json())
-		.then(json => {
-			console.log(json); 
-			console.log(json[0]['Lien garmin connect']); 
-			// json.forEach(item => {
-			// 	displayMap(item['connect_id']); 
-			// })
-			let rand = Math.floor(Math.random()*json.length); 
-			displayMap(json[rand]['connect_id'], 180); 
-		}); 
-
-
-
-	function displayMap(connect_id, dimension) {
-		let template = `<div class="track-view" style="position: relative; height: ${dimension+10}px;">
-			<iframe src="http://localhost/psc-tracks/map/?track=${connect_id}" frameborder="0" width="${dimension}" height="${dimension}" scrolling="no" style="position: absolute; border-radius: 8px;"></iframe>
-			<div class="mask" style="width: ${dimension}px; height: ${dimension}px; position: absolute; "></div>
-		</div>`; 
-		document.querySelector('.container').insertAdjacentHTML('beforeend', template); 
-	}
-
-
-
-</script>
+<script src="assets/app.js"></script>
 
 </body>
 </html>
