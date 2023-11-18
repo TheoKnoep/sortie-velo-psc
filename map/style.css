@@ -15,3 +15,7 @@
 .slider-container #time {
     width: 90%; 
 }
+
+.leaflet-control-container {
+    display: none; 
+}

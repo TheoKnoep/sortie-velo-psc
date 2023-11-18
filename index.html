@@ -7,6 +7,11 @@
 </head>
 <body>
 	
+<div class="container"></div>
+	<div class="track-view">
+		<iframe src="http://localhost/psc-tracks/map/?track=163957087" frameborder="0" width="200" height="200" scrolling="no" style="position: absolute; "></iframe>
+		<div class="mask" style="width: 200px; height: 200px; position: absolute; "></div>
+	</div>
 
 
 <script>
@@ -20,8 +25,21 @@
 		.then(json => {
 			console.log(json); 
 			console.log(json[0]['Lien garmin connect']); 
-			document.write(JSON.stringify(json)); 
+			json.forEach(item => {
+				displayMap(item['connect_id']); 
+				console.log(item['connect_id']); 
+			})
 		}); 
+
+
+
+	function displayMap(connect_id) {
+		let template = `<div class="track-view" style="position: relative; height: 220px;">
+			<iframe src="http://localhost/psc-tracks/map/?track=${connect_id}" frameborder="0" width="200" height="200" scrolling="no" style="position: absolute; "></iframe>
+			<div class="mask" style="width: 200px; height: 200px; position: absolute; "></div>
+		</div>`; 
+		document.querySelector('.container').insertAdjacentHTML('beforeend', template); 
+	}
 </script>
 
 </body>

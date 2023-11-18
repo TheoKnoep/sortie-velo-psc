@@ -87,6 +87,12 @@ async function displayPointsOnMap(pathfile, options = null) {
     polyline.addTo(map); 
 
 
+    // centrer la vue sur l'intégralité de la map : 
+    let bounds = polyline.getBounds(); 
+    map.fitBounds(bounds); 
+
+
+
     // Set time slider : 
     let ts_start = new Date(data[0].time).getTime() - time_modifier; 
     let ts_finish = new Date(data[data.length-1].time).getTime() - time_modifier; 
