@@ -5,7 +5,22 @@
         "Direction": "Est",
         "RDV": "Poly",
         "Notes": "70km S&M Aller Champigny retour Chennevièvre",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/210494863"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/210494863",
+        "connect_id": "210494863",
+        "details": {
+            "name": "Boucle 70km PSC",
+            "distance": {
+                "value": 79.438,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 370,
+                "unit": "m"
+            },
+            "score": {
+                "value": 9
+            }
+        }
     },
     {
         "Distance": "80",
@@ -13,7 +28,22 @@
         "Direction": "Chevreuse",
         "RDV": "Cité U",
         "Notes": "Passage en chvreuse rapide - 7 côtes",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/145454973"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/145454973",
+        "connect_id": "145454973",
+        "details": {
+            "name": "Mini Chevreuse",
+            "distance": {
+                "value": 81.899,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 722,
+                "unit": "m"
+            },
+            "score": {
+                "value": 57
+            }
+        }
     },
     {
         "Distance": "65",
@@ -21,7 +51,22 @@
         "Direction": "Est",
         "RDV": "Poly",
         "Notes": "Tour classique en S&M par Chennevievre",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/238072070"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/238072070",
+        "connect_id": "238072070",
+        "details": {
+            "name": "65KM_SETM",
+            "distance": {
+                "value": 65.295,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 386,
+                "unit": "m"
+            },
+            "score": {
+                "value": 17
+            }
+        }
     },
     {
         "Distance": "119",
@@ -29,7 +74,22 @@
         "Direction": "Ouest",
         "RDV": "porte bercy",
         "Notes": "Plus de souvenir - à recommenter",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/182515699"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/182515699",
+        "connect_id": "182515699",
+        "details": {
+            "name": "119kmversSE",
+            "distance": {
+                "value": 119.168,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 779,
+                "unit": "m"
+            },
+            "score": {
+                "value": 45
+            }
+        }
     },
     {
         "Distance": "60",
@@ -37,7 +97,22 @@
         "Direction": "Est",
         "RDV": "Villette ou poly",
         "Notes": "Petit tour sans s'éloigner, 100% urbain, pas roulant",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/163957087"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/163957087",
+        "connect_id": "163957087",
+        "details": {
+            "name": "CC12 Sans les Mains",
+            "distance": {
+                "value": 59.574,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 322,
+                "unit": "m"
+            },
+            "score": {
+                "value": 14
+            }
+        }
     },
     {
         "Distance": "60",
@@ -45,7 +120,22 @@
         "Direction": "Est",
         "RDV": "poly",
         "Notes": "Variante au petit tour S&M retour le long de la seine",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/144516427"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/144516427",
+        "connect_id": "144516427",
+        "details": {
+            "name": "60km_S&M_retour_Seine-2",
+            "distance": {
+                "value": 62.516,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 291,
+                "unit": "m"
+            },
+            "score": {
+                "value": 19
+            }
+        }
     },
     {
         "Distance": "40",
@@ -53,7 +143,22 @@
         "Direction": "est",
         "RDV": "poly",
         "Notes": "Tour de 40km bois de vincenne + boucle de la marne",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/142708260"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/142708260",
+        "connect_id": "142708260",
+        "details": {
+            "name": "40km_Boucles_Vincennes_Marne",
+            "distance": {
+                "value": 40.916,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 117,
+                "unit": "m"
+            },
+            "score": {
+                "value": 0
+            }
+        }
     },
     {
         "Distance": "80",
@@ -61,7 +166,22 @@
         "Direction": "Est",
         "RDV": "poly",
         "Notes": "Alternative au classique tour en seine et marne",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/141874736"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/141874736",
+        "connect_id": "141874736",
+        "details": {
+            "name": "De Polygone Vincennes à Côte de Tigeaux",
+            "distance": {
+                "value": 81.361,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 424,
+                "unit": "m"
+            },
+            "score": {
+                "value": 20
+            }
+        }
     },
     {
         "Distance": "77",
@@ -69,7 +189,22 @@
         "Direction": "Est",
         "RDV": "Stalingrad",
         "Notes": "Aller canal, retour poly",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/118727799"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/118727799",
+        "connect_id": "118727799",
+        "details": {
+            "name": "Boucle77 Canal Poly",
+            "distance": {
+                "value": 100.009,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 510,
+                "unit": "m"
+            },
+            "score": {
+                "value": 20
+            }
+        }
     },
     {
         "Distance": "80",
@@ -77,7 +212,22 @@
         "Direction": "Est",
         "RDV": "poly",
         "Notes": "boucle S&M classique par Chennevièvre",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/141788108"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/141788108",
+        "connect_id": "141788108",
+        "details": {
+            "name": "Seine et Marne PSC 80k",
+            "distance": {
+                "value": 80.993,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 432,
+                "unit": "m"
+            },
+            "score": {
+                "value": 21
+            }
+        }
     },
     {
         "Distance": "50",
@@ -85,7 +235,22 @@
         "Direction": "Est",
         "RDV": "poly",
         "Notes": "boucle S&M classique par Chennevièvre",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/134568464"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/134568464",
+        "connect_id": "134568464",
+        "details": {
+            "name": "47km_S&M",
+            "distance": {
+                "value": 46.974,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 221,
+                "unit": "m"
+            },
+            "score": {
+                "value": 12
+            }
+        }
     },
     {
         "Distance": "100",
@@ -93,7 +258,22 @@
         "Direction": "Est",
         "RDV": "Stalingrad",
         "Notes": "Direction disney retour par le poly",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/135374184"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/135374184",
+        "connect_id": "135374184",
+        "details": {
+            "name": "100kmCanal-Disney-poly",
+            "distance": {
+                "value": 100.009,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 514,
+                "unit": "m"
+            },
+            "score": {
+                "value": 20
+            }
+        }
     },
     {
         "Distance": "80",
@@ -101,7 +281,22 @@
         "Direction": "Est",
         "RDV": "poly",
         "Notes": "Aller Chennevièvre retour Bussy",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/135374184"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/135374184",
+        "connect_id": "135374184",
+        "details": {
+            "name": "100kmCanal-Disney-poly",
+            "distance": {
+                "value": 100.009,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 514,
+                "unit": "m"
+            },
+            "score": {
+                "value": 20
+            }
+        }
     },
     {
         "Distance": "110",
@@ -109,7 +304,22 @@
         "Direction": "Ouest",
         "RDV": "Cité U",
         "Notes": "Beau tour en Chevreuse",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/117247220"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/117247220",
+        "connect_id": "117247220",
+        "details": {
+            "name": "Chevreuse 108km\/1000D",
+            "distance": {
+                "value": 108.264,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 1028,
+                "unit": "m"
+            },
+            "score": {
+                "value": 84
+            }
+        }
     },
     {
         "Distance": "90",
@@ -117,7 +327,22 @@
         "Direction": "Est",
         "RDV": "Stalingrad",
         "Notes": "A\/R canal",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/102418965"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/102418965",
+        "connect_id": "102418965",
+        "details": {
+            "name": "Canal de l'Ourq 90km",
+            "distance": {
+                "value": 88.67,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 362,
+                "unit": "m"
+            },
+            "score": {
+                "value": 10
+            }
+        }
     },
     {
         "Distance": "80",
@@ -125,6 +350,21 @@
         "Direction": "Ouest",
         "RDV": "Cite U",
         "Notes": "Départ Cité U pour la chevreuse, retour par RER de St Remy en chevreuse",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/137867199"
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/137867199",
+        "connect_id": "137867199",
+        "details": {
+            "name": "Chevreuse-80km_citeURER_propre",
+            "distance": {
+                "value": 77.255,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 779,
+                "unit": "m"
+            },
+            "score": {
+                "value": 69
+            }
+        }
     }
 ]

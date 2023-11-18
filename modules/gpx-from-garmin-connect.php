@@ -10,25 +10,24 @@ class GPXfromGarminConnect {
 		return $this; 
 	}
 
-	public function getGPX() {
+	public function getGPX($force_new_fetch = false) {
 		$_course_id = $this->getID(); 
-		$gpx = file_get_contents('https://connect.garmin.com/modern/proxy/course-service/course/gpx/' . $_course_id); 
 
 		$existing_tracks_files = glob($_SERVER['DOCUMENT_ROOT'] . '/'. GPXfromGarminConnect::FOLDER . '/*'); 
-
 		$existing = []; 
 		foreach($existing_tracks_files as $file) {
 			$existing[] = basename($file); 
 		}
 
-		if (in_array($_course_id . '.gpx', $existing)) {
-			// GPX déjà présent sur le serveur
-		} else {
+		if ($force_new_fetch === true || !in_array($_course_id . '.gpx', $existing)) {
+			// on télécharge le GPX sur le serveur :
+			$gpx = file_get_contents('https://connect.garmin.com/modern/proxy/course-service/course/gpx/' . $_course_id); 
 			$this->saveToServer($_course_id, $gpx); 
-		}
+			return; 
+		} 	
 	}
 
-	private function getID() {
+	public function getID() {
 		$parts = parse_url($this->url); 
 		if ($parts['host'] !== 'connect.garmin.com') {
 			throw new Exception('URL is not Garmin Connect'); 
