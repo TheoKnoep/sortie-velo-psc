@@ -14,7 +14,7 @@ class GoogleSheetImporter {
 		 * - vérifier que l'URL est bien drive.google.com
 		 * - sanitizer le CSV obtenu (comment ?)
 		 */ 
-		$csv = file_get_contents($this->url . 'export?format=csv'); 
+		$csv = htmlentities(file_get_contents($this->url . 'export?format=csv')); 
 		// $csv = preg_match('/</', '&amp;'); // bref, remplacer les balises par leur équivalent &amp; 
 		return $csv; 
 	}

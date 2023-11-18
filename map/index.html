@@ -21,17 +21,8 @@
 <body>
     <div class="map-container" id="the-map"></div>
 
-    <!-- <div class="slider-container">
-        <input type="range" id="time" name="time" >
-        <label id="display-time"></label>
-        <button onclick="moveSlider(-1000); " width="48">-</button>
-        <button onclick="moveSlider(1000); ">+</button>
-    </div> -->
-
-
     <script>
         let param_from_url = new URLSearchParams(location.search); 
-        console.log(param_from_url.get('track')); 
 
         let required_track = param_from_url.get('track'); 
 

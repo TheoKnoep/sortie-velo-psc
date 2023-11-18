@@ -1,7 +1,7 @@
 <?php
 
 class GPXfromGarminConnect {
-	const FOLDER = 'psc-tracks/tracks'; 
+	const FOLDER = 'sortie-velo-psc/tracks'; 
 	/**
 	 * @param string URL du parcours sur Garmin Connect
 	 */

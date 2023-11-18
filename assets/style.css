@@ -28,6 +28,31 @@ main > * {
 .bold {
 	font-weight: bold;
 }
+.displaynone {
+	/* display: none !important; */
+	max-height: 0;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+
+
+
+
+.filter-block {
+	border-radius: 8px;
+	background: #EEE;
+	padding: 1em; 
+}
+
+
+
+
+
+
+
 
 
 .track__item {
