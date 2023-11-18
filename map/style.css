@@ -1,0 +1,17 @@
+* {
+    margin: 0; padding: 0; 
+}
+
+.map-container {
+    height: 100vh; 
+}
+
+.slider-container {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.slider-container #time {
+    width: 90%; 
+}

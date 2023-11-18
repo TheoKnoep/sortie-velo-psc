@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map leaflet</title>
+    <link rel="stylesheet" href="style.css" >
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+</head>
+
+<body>
+    <div class="map-container" id="the-map"></div>
+
+    <!-- <div class="slider-container">
+        <input type="range" id="time" name="time" >
+        <label id="display-time"></label>
+        <button onclick="moveSlider(-1000); " width="48">-</button>
+        <button onclick="moveSlider(1000); ">+</button>
+    </div> -->
+
+
+    <script>
+        let param_from_url = new URLSearchParams(location.search); 
+        console.log(param_from_url.get('track')); 
+
+        let required_track = param_from_url.get('track'); 
+
+        if (!required_track) {
+            throw new Error('undefined gpx track'); 
+        } 
+        let path_from_url = `../tracks/${required_track}.gpx`; 
+        
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
