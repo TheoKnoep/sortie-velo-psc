@@ -8,10 +8,10 @@
 <body>
 	
 <div class="container"></div>
-	<div class="track-view">
+	<!-- <div class="track-view">
 		<iframe src="http://localhost/psc-tracks/map/?track=163957087" frameborder="0" width="200" height="200" scrolling="no" style="position: absolute; "></iframe>
 		<div class="mask" style="width: 200px; height: 200px; position: absolute; "></div>
-	</div>
+	</div> -->
 
 
 <script>
@@ -25,21 +25,25 @@
 		.then(json => {
 			console.log(json); 
 			console.log(json[0]['Lien garmin connect']); 
-			json.forEach(item => {
-				displayMap(item['connect_id']); 
-				console.log(item['connect_id']); 
-			})
+			// json.forEach(item => {
+			// 	displayMap(item['connect_id']); 
+			// })
+			let rand = Math.floor(Math.random()*json.length); 
+			displayMap(json[rand]['connect_id'], 180); 
 		}); 
 
 
 
-	function displayMap(connect_id) {
-		let template = `<div class="track-view" style="position: relative; height: 220px;">
-			<iframe src="http://localhost/psc-tracks/map/?track=${connect_id}" frameborder="0" width="200" height="200" scrolling="no" style="position: absolute; "></iframe>
-			<div class="mask" style="width: 200px; height: 200px; position: absolute; "></div>
+	function displayMap(connect_id, dimension) {
+		let template = `<div class="track-view" style="position: relative; height: ${dimension+10}px;">
+			<iframe src="http://localhost/psc-tracks/map/?track=${connect_id}" frameborder="0" width="${dimension}" height="${dimension}" scrolling="no" style="position: absolute; border-radius: 8px;"></iframe>
+			<div class="mask" style="width: ${dimension}px; height: ${dimension}px; position: absolute; "></div>
 		</div>`; 
 		document.querySelector('.container').insertAdjacentHTML('beforeend', template); 
 	}
+
+
+
 </script>
 
 </body>
