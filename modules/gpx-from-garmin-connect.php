@@ -30,7 +30,7 @@ class GPXfromGarminConnect {
 	public function getID() {
 		$parts = parse_url($this->url); 
 		if ($parts['host'] !== 'connect.garmin.com') {
-			throw new Exception('URL is not Garmin Connect'); 
+			throw new Exception('URL is not Garmin Connect : ' . $this->url); 
 		}
 		$_id = explode('/modern/course/', $parts['path'])[1];
 		return $_id; 

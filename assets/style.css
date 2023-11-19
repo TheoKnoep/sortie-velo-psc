@@ -63,11 +63,13 @@ main > * {
 	box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.20);
 	padding: 1em;
 	margin-bottom: 1em;
+	overflow: auto;
 }
 
 .main-line {
 	display: grid;
 	grid-template-columns: 120px 1fr;
+	grid-template-rows: auto auto;
 	padding-bottom: 1em;
 	border-bottom: solid 1px #DCDCDC;
 }
@@ -77,6 +79,8 @@ main > * {
 	height: 120px; 
 	background-color: #f1f1f1;
 	border-radius: 4px;
+	grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 .main-line .text-container {
@@ -102,11 +106,20 @@ main > * {
 	margin-top: 1em; 
 }
 
-.main-line .text-container .meta-line {
-	display: grid;
-	grid-template-columns: 25% 25% 25% 25%;
+
+
+.main-line .meta-line {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 	margin-top: 1em; 
+	margin-left: 1em;
 }
+.main-line .meta-line > div {
+	width: 25%;
+}
+
+
 
 
 
@@ -130,4 +143,39 @@ main > * {
 .secondary-line .button-link.garmin-connect-link {
 	background-color: #B5D2FF;
 	color: #3E73A6; 
+}
+
+
+
+
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 720px) {
+	main {
+		width: 100%; 
+	}
+	main > * {
+		margin: .8em; 
+	}
+	.main-line .map-container {
+		grid-row-start: 1;
+    	grid-row-end: 2;
+	}
+	.main-line .text-container .title {
+		font-size: 1.2em; 
+	}
+	.main-line .meta-line {
+		grid-column-start: 1;
+    	grid-column-end: 3;
+		margin-left: 0;
+		font-size: .85em;
+	}
+}
+@media screen and (max-width: 520px) {
+	.main-line .meta-line > div {
+		width: 50%;
+	}
 }

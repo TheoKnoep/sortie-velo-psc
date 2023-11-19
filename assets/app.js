@@ -44,14 +44,13 @@ const TEMPLATES = {
 				<div class="map-container" data-connect-id="${ data['connect_id'] }"></div>
 				<div class="text-container">
 					<h2 class="title"><span class="distance">${Math.round(data.details.distance.value)}km</span> <span class="name">${data.details.name}</span></h2>
-					
 					<p class="description">${data['Notes']}</p>
-					<div class="meta-line">
-						<div class="direction"><span class="bold">${ICONS.direction}&nbsp;Direction</span> : ${data['Direction']}</div>
-						<div class="rdv"><span class="bold">${ICONS.start}&nbsp;Départ</span> : ${data['RDV']}</div>
-						<div class="elevation"><span class="bold">${ICONS.elevation}&nbsp;Dénivelé</span> : ${data.details.elevation.value} m</div>
-						<div class="score"><span class="bold">Difficulté</span> : ${data.details.score.value} <span class="more-info" onclick="openDificultyInfo()" style="cursor: pointer; position: relative; top: 3px;">${ICONS.infos(18)}</span></div>
-					</div>
+				</div>
+				<div class="meta-line">
+					<div class="direction"><span class="bold">${ICONS.direction}&nbsp;Direction</span> : ${data['Direction']}</div>
+					<div class="rdv"><span class="bold">${ICONS.start}&nbsp;Départ</span> : ${data['RDV']}</div>
+					<div class="elevation"><span class="bold">${ICONS.elevation}&nbsp;Dénivelé</span> : ${data.details.elevation.value}&nbsp;m</div>
+					<div class="score"><span class="bold">Difficulté</span> : ${data.details.score.value}&nbsp;<span class="more-info" onclick="openDificultyInfo()" style="cursor: pointer; position: relative; top: 3px;">${ICONS.infos(18)}</span></div>
 				</div>
 
 			</div>
