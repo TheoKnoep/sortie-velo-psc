@@ -102,10 +102,13 @@ function initialLoad() {
 function displayMap(target, connect_id, dimension) {
 	let template = `<div class="track-view" style="position: relative; height: ${dimension+10}px;">
 		<iframe src="${location.origin}/sortie-velo-psc/map/?track=${connect_id}" frameborder="0" width="${dimension}" height="${dimension}" scrolling="no" style="position: absolute; border-radius: 8px;"></iframe>
-		<div class="mask" style="width: ${dimension}px; height: ${dimension}px; position: absolute; "></div>
+		<div class="mask" onclick="window.open('${location.origin}/sortie-velo-psc/map/?track=${connect_id}&size=fullscreen', '_blank');" style="width: ${dimension}px; height: ${dimension}px; position: absolute; cursor: pointer; "></div>
+		<div class="ico-expand" style="position: absolute; top: 3px; right: 3px; z-index: 1;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-expand"><path d="m21 21-6-6m6 6v-4.8m0 4.8h-4.8"/><path d="M3 16.2V21m0 0h4.8M3 21l6-6"/><path d="M21 7.8V3m0 0h-4.8M21 3l-6 6"/><path d="M3 7.8V3m0 0h4.8M3 3l6 6"/></svg></div>
 	</div>`; 
 	target.innerHTML = ''; 
 	target.insertAdjacentHTML('beforeend', template); 
+
+
 }
 
 
