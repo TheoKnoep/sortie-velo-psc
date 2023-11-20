@@ -61,6 +61,13 @@ main h1 {
 	font-variant: small-caps;
 }
 
+
+.global-map iframe {
+	border-radius: 8px;
+}
+
+
+
 .filter-block {
 	border-radius: 8px;
 	background: #EEE;
