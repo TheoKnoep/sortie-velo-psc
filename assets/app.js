@@ -214,7 +214,7 @@ function openDificultyInfo() {
 			box-shadow: 0 0 78px #2121218c; 
 			padding: 1em; 
 			padding-top: 2em;
-			border-top: solid 8px #b4d1fe6e; 
+			border-top: solid 8px #DA6C066e; 
 			z-index:10; 
 		}
 		#modale button {
@@ -260,7 +260,7 @@ function openDificultyInfo() {
 	<p>La somme de ces scores donne le score du parcours.</p>`; 
 
 	let template = `<div id="modale" >
-		<button>X</button>
+		<button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
 		<div class="content">
 			${text}
 		</div>

@@ -22,6 +22,10 @@ body {
 	font-family:'Open Sans', 'Helvetica', 'Segoe UI', 'Trebuchet', sans-serif;
 }
 
+a {
+	color: #DA6C06;
+}
+
 main {
 	width: 96%;
 	max-width: 980px;
@@ -52,8 +56,10 @@ h1, h2, h3 {
 	font-family: 'Dosis','Titillium Web','Bebas Neue';
 }
 
-
-
+main h1 {
+	padding-top: 1em; 
+	font-variant: small-caps;
+}
 
 .filter-block {
 	border-radius: 8px;
