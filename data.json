@@ -382,5 +382,29 @@
             }
         },
         "_id": 15
+    },
+    {
+        "Distance": "50",
+        "Denivele": "200",
+        "Direction": "Est",
+        "RDV": "Stalingrad",
+        "Notes": "A\/R canal + variante sur la route stratégique avec deux belles côtes dans le bois pour une sortie pas trop longue",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/239245855",
+        "connect_id": "239245855",
+        "details": {
+            "name": "Tour de la route stratégique - Bois de Bernouille",
+            "distance": {
+                "value": 47.234,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 214,
+                "unit": "m"
+            },
+            "score": {
+                "value": 10
+            }
+        },
+        "_id": 16
     }
 ]

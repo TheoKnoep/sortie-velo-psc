@@ -88,6 +88,11 @@ main > * {
 
 
 
+.tracks-block {
+	padding-bottom: 1em;
+}
+
+
 .track__item {
     display: grid;
     grid-template-rows: auto auto;

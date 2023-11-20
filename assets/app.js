@@ -2,30 +2,6 @@
 
 const APP_CONTAINER = document.querySelector('.tracks-block'); 
 
-let example = {
-    "Distance": "70",
-    "Denivele": "400",
-    "Direction": "Est",
-    "RDV": "Poly",
-    "Notes": "70km S&M Aller Champigny retour Chennevièvre",
-    "Lien garmin connect": "https://connect.garmin.com/modern/course/210494863",
-    "connect_id": "210494863",
-    "details": {
-        "name": "Boucle 70km PSC",
-        "distance": {
-            "value": 79.438,
-            "unit": "km"
-        },
-        "elevation": {
-            "value": 370,
-            "unit": "m"
-        },
-        "score": {
-            "value": 9
-        }
-    }
-}; 
-
 
 const ICONS = {
 	start: `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`, 
@@ -70,9 +46,15 @@ window.addEventListener('DOMContentLoaded', initialLoad);
 
 
 
+// synchronze in background : 
 fetch('synchronize.php')
 .then(res => res.text()) 
-.then(text => console.log(text)); 
+.then(text => {
+	console.log(text); 
+	if (text === 'data_changed') {
+		new Snackbar(`<div style="display: flex; align-items: center; justify-content: space-between"><span>De nouvelles traces sont disponibles</span><a style="margin-left: auto; font-style: italic;" href="javascript:initialLoad()">Recharger la page ?</a></div>`).display({delay: 10000}); 
+	}
+}); 
 
 
 
