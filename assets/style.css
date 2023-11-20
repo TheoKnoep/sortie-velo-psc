@@ -9,6 +9,7 @@
 
 body {
 	background-color: #EAEAEA;
+	color: #353535; 
 	font-family: 'Segoe UI', 'Trebuchet', sans-serif;
 }
 
@@ -47,8 +48,40 @@ main > * {
 	padding: 1em; 
 }
 
+.filter-block .form-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
 
+.filter-block #filters {
+	padding: 1em;
+}
+.filter-block.closed #filters {
+	max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
 
+.filter-block.closed .expand-icon {
+	transform: rotate(180deg);
+}
+
+.filter-block #filters select {
+	border: solid 2px #e1e1e1;
+	padding: 6px 12px;
+	border-radius: 4px;
+}
+
+.filter-block #filters input {
+	border: solid 2px #e1e1e1;
+	padding: 6px 12px;
+	border-radius: 4px;
+	width: 72px;
+} 
 
 
 

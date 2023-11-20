@@ -297,3 +297,15 @@ function openDificultyInfo() {
 function displayNumberOfTrack(number) {
 	document.querySelector('#tracks-counter').textContent = `${number} parcours affichés`; 
 }
+
+
+
+
+function sortCards(array_of_id) {
+
+}
+
+
+function toggleFilters() {
+	document.querySelector('.filter-block').classList.toggle('closed'); 
+}
