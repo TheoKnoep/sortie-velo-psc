@@ -69,9 +69,10 @@ main > * {
 .main-line {
 	display: grid;
 	grid-template-columns: 120px 1fr;
-	grid-template-rows: auto auto;
+	grid-template-rows: auto auto auto;
 	padding-bottom: 1em;
 	border-bottom: solid 1px #DCDCDC;
+	gap: 12px;
 }
 
 .main-line .map-container {
@@ -79,54 +80,71 @@ main > * {
 	height: 120px; 
 	background-color: #f1f1f1;
 	border-radius: 4px;
-	grid-row-start: 1;
-    grid-row-end: 3;
+	grid-row: 1/4;
+}
+.main-line .map-container .mask {
+	z-index: 2;
 }
 
-.main-line .text-container {
-	margin-left: 1em;
-}
-.main-line .text-container .title {
+
+.main-line .title {
 	display: flex;
 	align-items: center;
+	grid-column: 2/3;
+    grid-row: 1/2;
 }
-.main-line .text-container .distance {
+.main-line .distance {
 	background-color: #EAEAEA;
 	color: #5E5E5E; 
 	border-radius: 4px;
 	padding: 3px 6px;
 	display: block;
-}
-.main-line .text-container .name {
-	margin-left: 12px;
 	font-weight: lighter;
 }
+.main-line .name {
+	margin-left: 12px;
+	word-break: break-word;
+}
+
+
+
+
+.main-line .text-container {
+	grid-column: 2/3;
+    grid-row: 2/3;
+}
+
 .main-line .text-container .description {
 	font-style: italic;
-	margin-top: 1em; 
 }
 
 
 
 .main-line .meta-line {
+	grid-row: 3/4;
+    grid-column: 2/3;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	margin-top: 1em; 
-	margin-left: 1em;
 }
 .main-line .meta-line > div {
 	width: 25%;
 }
 
-
+.main-line .meta-line .more-info {
+	opacity: .6;
+	transition: opacity ease 280ms;
+}
+.main-line .meta-line .more-info:hover {
+	opacity: 1;
+}
 
 
 
 .secondary-line {
 	display: flex;
 	justify-content: flex-end;
-	padding-top: 1em;
+	padding-top: .25em;
 }
 .secondary-line .button-link {
 	display: block;
@@ -161,15 +179,18 @@ main > * {
 		margin: .8em; 
 	}
 	.main-line .map-container {
-		grid-row-start: 1;
-    	grid-row-end: 2;
+		grid-row:2/3;
 	}
-	.main-line .text-container .title {
+	.main-line .title {
+		grid-column: 1/3;
+		grid-row: 1/2;
 		font-size: 1.2em; 
 	}
+	.main-line .text-container {
+		align-self: center;
+	}
 	.main-line .meta-line {
-		grid-column-start: 1;
-    	grid-column-end: 3;
+		grid-column: 1/3;
 		margin-left: 0;
 		font-size: .85em;
 	}

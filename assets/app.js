@@ -42,8 +42,8 @@ const TEMPLATES = {
 		return `<div class="track__item" data-id="${data._id}">
 			<div class="main-line">
 				<div class="map-container" data-connect-id="${ data['connect_id'] }"></div>
+				<h2 class="title"><span class="distance">${Math.round(data.details.distance.value)}km</span> <span class="name">${data.details.name}</span></h2>
 				<div class="text-container">
-					<h2 class="title"><span class="distance">${Math.round(data.details.distance.value)}km</span> <span class="name">${data.details.name}</span></h2>
 					<p class="description">${data['Notes']}</p>
 				</div>
 				<div class="meta-line">
@@ -224,6 +224,32 @@ function displayOnly(array_of_id) {
 function openDificultyInfo() {
 	let style = `<style id="modale-content-style">
 
+		#modale {
+			position: fixed; 
+			bottom: 0; 
+			width: 100%; 
+			background-color: #fff; 	
+			box-shadow: 0 0 78px #2121218c; 
+			padding: 1em; 
+			padding-top: 2em;
+			border-top: solid 8px #b4d1fe6e; 
+			z-index:10; 
+		}
+		#modale button {
+			float: right;
+			border-radius: 120px;
+			display: flex;
+			width: 52px;
+			height: 52px;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			border: none;
+			position: relative;
+			bottom: 62px;
+			box-shadow: 1px 1px 6px #2121214f; 
+		}
+
 		#modale .content {
 			max-width: 920px;
 			margin: auto;
@@ -236,8 +262,9 @@ function openDificultyInfo() {
 		#modale .content blockquote {
 			margin-left: 1em;
 			margin-bottom: 1em;
-			border: solid 1px gray;
-			border-left: solid 5px gray;
+			border: solid 1px #ccc;
+			border-left: solid 5px #ccc;
+			border-radius: 2px;
 			padding: 0.6em;
 		}
 	
@@ -247,31 +274,11 @@ function openDificultyInfo() {
 
 	let text = `<p>Le <strong>score de difficulté</strong> est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.</p>
 	<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.</em></p>
-	<p>Le calcul est basé sur la formule de difficulté d'une ascension utilisée par <a href='https://www.procyclingstats.com/info/profile-score-explained' target='_blank'>ProCyclingStats</a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote>[(pente/2)^2] * [longueur en km]</blockquote>
+	<p>Le calcul est basé sur la formule de difficulté d'une ascension utilisée par <a href='https://www.procyclingstats.com/info/profile-score-explained' target='_blank'>ProCyclingStats</a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote>[(pente/2)²] × [longueur en km]</blockquote>
 	<p>La somme de ces scores donne le score du parcours.</p>`; 
 
-	let template = `<div id="modale" style="
-		position: fixed; 
-		bottom: 0; 
-		width: 100%; 
-		background-color: #fff; 	
-		box-shadow: 0 0 78px #2121218c; 
-		padding: 1em; 
-	">
-		<button style="
-			float: right;
-			border-radius: 120px;
-			display: flex;
-			width: 52px;
-			height: 52px;
-			align-items: center;
-			justify-content: center;
-			cursor: pointer;
-			border: none;
-			position: relative;
-			bottom: 3em;
-			box-shadow: 0 0 12px #2121218c; 
-		">X</button>
+	let template = `<div id="modale" >
+		<button>X</button>
 		<div class="content">
 			${text}
 		</div>
