@@ -406,5 +406,29 @@
             }
         },
         "_id": 16
+    },
+    {
+        "Distance": "45",
+        "Denivele": "150",
+        "Direction": "Est",
+        "RDV": "Stalingrad",
+        "Notes": "Trace tranquille pas trop longue&#44; aller par le canal&#44; retour par les bords de Marne",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/239248302",
+        "connect_id": "239248302",
+        "details": {
+            "name": "De l'Ourcq à la Marne",
+            "distance": {
+                "value": 45.604,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 170,
+                "unit": "m"
+            },
+            "score": {
+                "value": 4
+            }
+        },
+        "_id": 17
     }
 ]
