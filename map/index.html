@@ -56,7 +56,6 @@
             if (required_track === "all") {
                 let res = await fetch('../controllers/list-of-tracks.php'); 
                 let array = await res.json(); 
-                console.log(array); 
                 array.forEach(item => {
                     array_of_path.push(`../tracks/${item}`); 
                 })
@@ -71,7 +70,43 @@
                 document.querySelector('#miniature-only').remove(); 
             }
 
-            initMap(array_of_path); 
+            let readyMap = await initMap(array_of_path); 
+
+            // Initialiser un tableau vide pour stocker les limites
+            let allPolylinesBounds = [];
+            // Boucler à travers les polylines pour obtenir leurs limites individuelles
+            document.polylines.forEach(function(polyline) {
+                let bounds = polyline.getBounds();
+                allPolylinesBounds.push(bounds);
+            });
+            // Fusionner les limites de toutes les polylines
+            let combinedBounds = allPolylinesBounds.reduce(function(bounds1, bounds2) {
+                return bounds1.extend(bounds2);
+            });
+            // Centrer la vue sur les limites combinées de toutes les polylines
+            map.fitBounds(combinedBounds);
+
+
+            /// bricolage d'interactivité au clic sur un tracé :
+            let paths = document.querySelectorAll('path.leaflet-interactive');  
+
+            // document.querySelector('svg.leaflet-zoom-animated').style.position = 'relative'; 
+            // paths.forEach(path => {
+            //     path.onclick = (event) => {
+            //         paths.forEach(path => path.style.stroke = "#ed143db5"); // reset other paths
+            //         // document.querySelector('svg.leaflet-zoom-animated').insertAdjacentElement('beforeend', path);  
+            //         path.style.stroke = 'black'; 
+            //         path.style.zIndex = '2'; 
+            //     }
+            // })
+
+            // document.polylines.forEach(poly => {
+            //     poly.addEventLister('click', event => {
+            //         console.log(poly); 
+            //         poly.setStyle({color: "teal", weight: 3}).bringToFront(); 
+            //     })
+            // })
+
         }
         
         

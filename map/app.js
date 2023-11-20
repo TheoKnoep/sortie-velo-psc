@@ -1,33 +1,49 @@
+/**
+ * Documentation Leaflet : 
+ * https://leafletjs.com/reference.htm 
+ */
+
+
+
+document.polylines = []; 
+
+
+
+let mapOptions = {
+    zoom: 12
+}; 
+
+let map = L.map('the-map', mapOptions); 
+
+
+// On peut choisir parmi de nombreux fonds de carte avec : http://leaflet-extras.github.io/leaflet-providers/preview/ 
+let provider = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"; 
+
+L.tileLayer(provider, {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
 
 
 
 
-function initMap(array_of_path) {
+
+
+
+
+
+
+async function initMap(array_of_path) {
     // Initialiser l'affichage de la carte : 
-    let mapOptions = {
-        zoom: 12
-    }; 
-
-    let map = L.map('the-map', mapOptions); 
 
 
-    // On peut choisir parmi de nombreux fonds de carte avec : http://leaflet-extras.github.io/leaflet-providers/preview/ 
-    let provider = "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"; // default
-    provider = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'; 
-    provider = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"; 
-
-    L.tileLayer(provider, {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-
-
-
+    let promisses = []; 
     // display track :
     array_of_path.forEach(path_from_url => {
-        displayPointsOnMap(path_from_url, {color: "#ed143db5"}); 
+        promisses.push(displayPointsOnMap(path_from_url, {color: "#ed143db5"})); 
     })
 
+    return Promise.all(promisses); 
 
 
 
@@ -37,17 +53,14 @@ function initMap(array_of_path) {
     */
 
     async function displayPointsOnMap(pathfile, options = null) {
-
         if (!pathfile) {
             throw new Error('GPX track is not defined'); 
         }
-
         let data = []; 
         let input = pathfile.split('.')[pathfile.split('.').length-1]; 
 
         //select Color: 
         if (options && options.color) { color = options.color }
-
 
         // Get data
         if (input === 'gpx') {
@@ -66,11 +79,21 @@ function initMap(array_of_path) {
         let polyline = L.polyline(latlngs, { color: color }); 
         polyline.addTo(map); 
 
-        // return polyline; 
+        polyline.feature = {
+            properties: {
+                'data-name': 'xxx'
+            }
+        }
 
-        // centrer la vue sur l'intégralité de la map : 
+        console.log(polyline); 
+
+        // centrer la vue sur l'intégralité de la trace : 
         let bounds = polyline.getBounds(); 
         map.fitBounds(bounds); 
+
+        document.polylines.push(polyline); 
+
+        return polyline; 
     }
 
 
