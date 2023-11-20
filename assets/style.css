@@ -6,11 +6,20 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: 'Dosis';
+	src: url('fonts/Dosis-Medium.ttf');
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('fonts/OpenSans-Regular.ttf');
+}
+
 
 body {
 	background-color: #EAEAEA;
 	color: #353535; 
-	font-family: 'Segoe UI', 'Trebuchet', sans-serif;
+	font-family:'Open Sans', 'Helvetica', 'Segoe UI', 'Trebuchet', sans-serif;
 }
 
 main {
@@ -23,7 +32,7 @@ main {
 
 }
 main > * {
-	margin: 2em;
+	margin: 2rem;
 }
 
 .bold {
@@ -39,6 +48,10 @@ main > * {
 
 
 
+h1, h2, h3 {
+	font-family: 'Dosis','Titillium Web','Bebas Neue';
+}
+
 
 
 
@@ -46,6 +59,12 @@ main > * {
 	border-radius: 8px;
 	background: #EEE;
 	padding: 1em; 
+	display: grid;
+	grid-template-rows: auto auto;
+	transition: all ease 200ms;
+}
+.filter-block.closed {
+	grid-template-rows: auto 0;
 }
 
 .filter-block .form-head {
@@ -55,19 +74,30 @@ main > * {
 	cursor: pointer;
 }
 
+.filter-block .form-head h2 {
+	font-size: 1.2em;
+}
+
 .filter-block #filters {
 	padding: 1em;
+	opacity: 1;
+	transition: all ease 600ms;
 }
 .filter-block.closed #filters {
-	max-height: 0;
+	/* max-height: 0; */
     overflow: hidden;
     opacity: 0;
 	padding-top: 0;
 	padding-bottom: 0;
 }
 
+
+.filter-block .expand-icon {
+	transform: rotate(0deg);
+	transition: all ease 300ms;
+}
 .filter-block.closed .expand-icon {
-	transform: rotate(180deg);
+	transform: rotate(-180deg);
 }
 
 .filter-block #filters select {
