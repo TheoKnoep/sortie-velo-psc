@@ -39,24 +39,44 @@
 <body>
     <div class="map-container" id="the-map"></div>
 
+    <script src="app.js"></script>
     <script>
-        let param_from_url = new URLSearchParams(location.search); 
+        handleRequest(); 
 
-        let required_track = param_from_url.get('track'); 
+        async function handleRequest() {
+            let param_from_url = new URLSearchParams(location.search); 
 
-        if (!required_track) {
-            throw new Error('undefined gpx track'); 
-        } 
-        let path_from_url = `../tracks/${required_track}.gpx`; 
+            let required_track = param_from_url.get('track'); 
 
-        let size = param_from_url.get('size') ?  param_from_url.get('size') : 'miniature'; 
+            if (!required_track) {
+                throw new Error('undefined gpx track'); 
+            } 
 
-        if (size === 'fullscreen') {
-            document.querySelector('#miniature-only').remove(); 
+            let array_of_path = []; 
+            if (required_track === "all") {
+                let res = await fetch('../controllers/list-of-tracks.php'); 
+                let array = await res.json(); 
+                console.log(array); 
+                array.forEach(item => {
+                    array_of_path.push(`../tracks/${item}`); 
+                })
+            } else {
+                array_of_path.push(`../tracks/${required_track}.gpx`); 
+            }
+
+
+            let size = param_from_url.get('size') ?  param_from_url.get('size') : 'miniature'; 
+
+            if (size === 'fullscreen') {
+                document.querySelector('#miniature-only').remove(); 
+            }
+
+            initMap(array_of_path); 
         }
         
+        
     </script>
-    <script src="app.js"></script>
+    
 </body>
 
 </html>
