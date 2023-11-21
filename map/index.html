@@ -166,7 +166,7 @@
 
         let channel = new BroadcastChannel('filter-map'); 
         channel.onmessage = (event) => {
-            console.log(event);
+            // console.log(event);
             filterTracks(event.data);  
         }
 

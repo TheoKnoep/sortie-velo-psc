@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', initialLoad);
 fetch('synchronize.php')
 .then(res => res.text()) 
 .then(text => {
-	console.log(text); 
+	// console.log(text); 
 	if (text === 'data_changed') {
 		new Snackbar(`<div style="display: flex; align-items: center; justify-content: space-between"><span>De nouvelles traces sont disponibles</span><a style="margin-left: auto; font-style: italic;" href="javascript:initialLoad()">Recharger la page ?</a></div>`).display({delay: 10000}); 
 	}
@@ -64,7 +64,7 @@ function initialLoad() {
 	fetch('data.json')
 	.then(res => res.json())
 	.then(json => {
-		console.log(json); 
+		// console.log(json); 
 		document.data = json; 
 		APP_CONTAINER.innerHTML = ''; 
 		json.forEach(item => {
@@ -290,9 +290,63 @@ function displayNumberOfTrack(number) {
 
 
 
+function sortIDs(param) {
+	let data = [...document.data]; 
+	if (param === 'distance-') {
+		data.sort((a,b) => {
+			return b.details.distance.value - a.details.distance.value; 
+		}); 
+	} else if (param === 'distance+') {
+		data.sort((a,b) => {
+			return a.details.distance.value - b.details.distance.value; 
+		}); 
+	} else if (param === 'alpha+') {
+		data.sort((a,b) => {
+			if (a.details.name > b.details.name) { return 1; }
+			if (a.details.name < b.details.name) { return -1; }
+			return 0; 
+		}); 
+	} else if (param === 'alpha-') {
+		data.sort((a,b) => {
+			if (a.details.name > b.details.name) { return -1; }
+			if (a.details.name < b.details.name) { return 1; }
+			return 0; 
+		}); 
+	} else if (param === 'elevation-') {
+		data.sort((a,b) => {
+			return b.details.elevation.value - a.details.elevation.value; 
+		}); 
+	} else if (param === 'elevation+') {
+		data.sort((a,b) => {
+			return a.details.elevation.value - b.details.elevation.value; 
+		}); 
+	} else if (param === 'score-') {
+		data.sort((a,b) => {
+			return b.details.score.value - a.details.score.value; 
+		}); 
+	} else if (param === 'score+') {
+		data.sort((a,b) => {
+			return a.details.score.value - b.details.score.value; 
+		}); 
+	}
 
+	let output = [];
+	data.forEach(item => { output.push(item._id); })
+	return output; 
+	
+}
 function sortCards(array_of_id) {
+	if (array_of_id.length === 0) { return }
 
+	let container = document.querySelector('.tracks-block');
+	// sort 1st item of the list : 
+	container.insertAdjacentElement('afterbegin', container.querySelector(`[data-id="${array_of_id[0]}"]`)); 
+
+	if (array_of_id.length === 1) { return }
+
+	for (let i = 1; i<array_of_id.length; i++) {
+		container.querySelector(`[data-id="${array_of_id[i-1]}"]`).insertAdjacentElement('afterend', container.querySelector(`[data-id="${array_of_id[i]}"]`))
+	}
 }
 
 
