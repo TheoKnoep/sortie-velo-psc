@@ -6,7 +6,10 @@
 
 
 document.polylines = []; 
+document.active_polyline = null; 
 
+
+const TRACK_COLOR = "#ed143db5"; 
 
 
 let mapOptions = {
@@ -40,7 +43,7 @@ async function initMap(array_of_path) {
     let promisses = []; 
     // display track :
     array_of_path.forEach(path_from_url => {
-        promisses.push(displayPointsOnMap(path_from_url, {color: "#ed143db5"})); 
+        promisses.push(displayPointsOnMap(path_from_url, {color: TRACK_COLOR})); 
     })
 
     return Promise.all(promisses); 
@@ -81,15 +84,14 @@ async function initMap(array_of_path) {
 
         polyline.feature = {
             properties: {
-                'data-name': 'xxx'
+                'name': pathfile
             }
         }
 
-        console.log(polyline); 
 
         // centrer la vue sur l'intégralité de la trace : 
-        let bounds = polyline.getBounds(); 
-        map.fitBounds(bounds); 
+        // let bounds = polyline.getBounds(); 
+        // map.fitBounds(bounds); 
 
         document.polylines.push(polyline); 
 

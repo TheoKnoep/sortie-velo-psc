@@ -23,6 +23,21 @@
         .map-container {
             height: 100vh; 
         }
+
+        .track-info > div {
+            position: fixed; 
+            width: 96%; 
+            text-align: center; 
+            background-color: #ffffff9c;       
+            bottom: 2%;
+            left: 2%; 
+            z-index: 1000;
+            box-sizing: border-box;
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
+            padding: 1em;
+            color: #252525;
+        }
     </style>
 
     <style id="miniature-only">
@@ -37,6 +52,7 @@
 </head>
 
 <body>
+    <div class="track-info"></div>
     <div class="map-container" id="the-map"></div>
 
     <script src="app.js"></script>
@@ -72,6 +88,7 @@
 
             let readyMap = await initMap(array_of_path); 
 
+            // ----
             // Initialiser un tableau vide pour stocker les limites
             let allPolylinesBounds = [];
             // Boucler à travers les polylines pour obtenir leurs limites individuelles
@@ -85,27 +102,47 @@
             });
             // Centrer la vue sur les limites combinées de toutes les polylines
             map.fitBounds(combinedBounds);
+            // ----
+ 
+
+            let res = await fetch('../data.json'); 
+            document.json = await res.json(); 
+
+            document.polylines.forEach(poly => {
+                poly.on('click', event => {
+                    let connect_id = event.target.feature.properties.name.split('/')[2].split('.gpx')[0]; 
+                    /* reset */ document.polylines.forEach(poly => poly.setStyle({color: TRACK_COLOR, weight: 3})); 
+                    if (document.active_polyline !== event.target.feature.properties.name) {
+                        poly.setStyle({color: "#353535", weight: 5}).bringToFront(); 
+                        document.active_polyline = event.target.feature.properties.name; 
+                    } else {
+                        poly.setStyle({color: TRACK_COLOR, weight: 3}).bringToBack(); 
+                        document.active_polyline = null; 
+                    }
+
+                    if (document.active_polyline) {
+                        // get info of track : 
+                        let track_info = document.json.filter(item => {
+                            return item.connect_id === connect_id; 
+                        })[0]; 
+                        // insert message in DOM :
+                        document.querySelector('.track-info').innerHTML = `<div>
+                                <p><strong>[${Math.round(track_info.details.distance.value)}km] &mdash; ${track_info.details.name}</strong>
+                                <p>${track_info['Notes']}</p>
+                                </div>`; 
+                    } else {
+                        document.querySelector('.track-info').innerHTML = ''; 
+                    }
+                    
+                })
+
+                // masquer ou non les traces en fonctions de filtres : 
+                poly.on('filter', (event) => {
+                    console.log('filer event : ', event); 
+                })
+            })
 
 
-            /// bricolage d'interactivité au clic sur un tracé :
-            let paths = document.querySelectorAll('path.leaflet-interactive');  
-
-            // document.querySelector('svg.leaflet-zoom-animated').style.position = 'relative'; 
-            // paths.forEach(path => {
-            //     path.onclick = (event) => {
-            //         paths.forEach(path => path.style.stroke = "#ed143db5"); // reset other paths
-            //         // document.querySelector('svg.leaflet-zoom-animated').insertAdjacentElement('beforeend', path);  
-            //         path.style.stroke = 'black'; 
-            //         path.style.zIndex = '2'; 
-            //     }
-            // })
-
-            // document.polylines.forEach(poly => {
-            //     poly.addEventLister('click', event => {
-            //         console.log(poly); 
-            //         poly.setStyle({color: "teal", weight: 3}).bringToFront(); 
-            //     })
-            // })
 
         }
         
