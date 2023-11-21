@@ -9,7 +9,12 @@
 
 
 </head>
-<body>
+<body style="position: fixed;">
+	<div class="load" style="position: fixed; width: 100%; height: 100lvh; top: 0; left: 0; background-color: #fff;display: flex; justify-content: center; align-items: center; z-index: 999; opacity: 1; transition: opacity ease 600ms;">
+		<span class="loader"></span>
+	</div>
+
+
 	<main>
 		<h1>Liste des traces :</h1>
 		<div class="global-map">
@@ -59,6 +64,17 @@
 <script src="assets/app.js"></script>
 <script src="assets/ux.js"></script>
 <script src="assets/html2canvas.js"></script>
+
+
+<script>
+	window.addEventListener('DOMContentLoaded', event => {
+		document.querySelector('.load').style.opacity = "0"; 
+		document.querySelector('body').removeAttribute('style'); 
+		setTimeout(function() {
+			document.querySelector('.load').remove();
+		}, 600); 
+	})
+</script>
 
 </body>
 </html>
