@@ -285,7 +285,7 @@ function openDificultyInfo() {
 
 
 function displayNumberOfTrack(number) {
-	document.querySelector('#tracks-counter').textContent = `${number} parcours affichés`; 
+	document.querySelector('#tracks-counter').textContent = `—${number} parcours affichés`; 
 }
 
 

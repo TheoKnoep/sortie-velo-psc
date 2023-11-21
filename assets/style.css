@@ -17,7 +17,9 @@
 
 
 body {
-	background-color: #EAEAEA;
+	/* background-color: #EAEAEA; */
+	background-size: cover;
+	background-attachment: fixed;
 	color: #353535; 
 	font-family:'Open Sans', 'Helvetica', 'Segoe UI', 'Trebuchet', sans-serif;
 }

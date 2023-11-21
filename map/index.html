@@ -139,10 +139,14 @@
 
                 // masquer ou non les traces en fonctions de filtres : 
                 poly.on('filter', (event) => {
-                    console.log('filter event : ', event.customData); 
+                    let searchparam = new URLSearchParams(location.search);
+
+                    if (searchparam.get('size') === 'fullscreen') {
+                        // apply filter only if page is NOT : ?size=fullscreen
+                        return; 
+                    }
+                    
                     let connect_id = poly.feature.properties.name.split('/')[2].split('.gpx')[0]; 
-                    console.log('id of target event : ', connect_id); 
-                    console.log(event.customData.indexOf(connect_id)); 
                     document.querySelector('.track-info').innerHTML = ''; 
                     if (event.customData.indexOf(connect_id) < 0) { // l'id de la track n'est pas dans le tableau des ID à garder :
                         poly.setStyle({color: 'transparent', weight: 0}).bringToBack(); 
