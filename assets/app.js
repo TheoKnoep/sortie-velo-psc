@@ -1,5 +1,5 @@
 
-
+let channel = new BroadcastChannel('filter-map'); 
 const APP_CONTAINER = document.querySelector('.tracks-block'); 
 
 
@@ -147,15 +147,18 @@ function listenFilterForm() {
 			filters.distance_max = filterForm.querySelector('#distance-max').value; 
 		}
 
-		let arryOfIDsToDisplay = listOfIDsForFilter(filters); 
-		displayOnly(arryOfIDsToDisplay); 
-		displayNumberOfTrack(arryOfIDsToDisplay.length);  
+		let arrayOfIDsToDisplay = listOfIDsForFilter(filters); 
+		displayOnly(arrayOfIDsToDisplay); 
+		displayNumberOfTrack(arrayOfIDsToDisplay.length); 
+
+		let connect_id_to_display = listOfIDsForFilter(filters, 'connect_id'); 
+		channel.postMessage(connect_id_to_display);  
 
 	})
 }
 
 
-function listOfIDsForFilter(filterObject) {
+function listOfIDsForFilter(filterObject, type = 'id') {
 	let all = [...document.data];
 	
 	if (filterObject.direction) {
@@ -184,7 +187,12 @@ function listOfIDsForFilter(filterObject) {
 	console.log(all); 
 
 	let output = []; 
-	all.forEach(item => { output.push(item._id)})
+	if (type === 'id') {
+		all.forEach(item => { output.push(item._id)})
+	} else if (type === 'connect_id') {
+		all.forEach(item => { output.push(item.connect_id)})
+	}
+	
 	return output; 
 }
 
@@ -291,3 +299,7 @@ function sortCards(array_of_id) {
 function toggleFilters() {
 	document.querySelector('.filter-block').classList.toggle('closed'); 
 }
+
+
+
+

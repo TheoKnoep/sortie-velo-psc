@@ -64,6 +64,8 @@ main h1 {
 
 .global-map iframe {
 	border-radius: 8px;
+	width: 100%;
+	height: 580px;
 }
 
 

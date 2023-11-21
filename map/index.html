@@ -108,6 +108,8 @@
             let res = await fetch('../data.json'); 
             document.json = await res.json(); 
 
+
+            // HANDLE EVENTS :
             document.polylines.forEach(poly => {
                 poly.on('click', event => {
                     let connect_id = event.target.feature.properties.name.split('/')[2].split('.gpx')[0]; 
@@ -138,13 +140,52 @@
 
                 // masquer ou non les traces en fonctions de filtres : 
                 poly.on('filter', (event) => {
-                    console.log('filer event : ', event); 
+                    console.log('filter event : ', event.customData); 
+                    let connect_id = poly.feature.properties.name.split('/')[2].split('.gpx')[0]; 
+                    console.log('id of target event : ', connect_id); 
+                    console.log(event.customData.indexOf(connect_id)); 
+                    if (event.customData.indexOf(connect_id) < 0) { // l'id de la track n'est pas dans le tableau des ID à garder :
+                        poly.setStyle({color: 'transparent', weight: 0}).bringToBack(); 
+                    } else {
+                        poly.setStyle({color: TRACK_COLOR, weight: 3}).bringToBack(); 
+                    }
                 })
             })
 
+            
 
 
         }
+
+
+
+
+        let channel = new BroadcastChannel('filter-map'); 
+        channel.onmessage = (event) => {
+            console.log(event);
+            filterTracks(event.data);  
+        }
+
+
+
+
+        function filterTracks(array_of_id_to_keep) {
+            let customEvent = new Event('filter');
+            document.polylines.forEach(poly => {
+                poly.fire('filter', { customData: array_of_id_to_keep });
+            })
+        }
+
+        /*
+let customEvent = new Event('filter');
+let tracks_to_display = ['134568464', '238072070']; 
+document.polylines.forEach(poly => {
+    poly.fire('filter', { customData: tracks_to_display });
+})
+
+filterTracks(['134568464', '238072070']); 
+
+        */
         
         
     </script>
