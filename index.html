@@ -12,6 +12,10 @@
 <body>
 	<main>
 		<h1>Liste des traces :</h1>
+		<div class="global-map">
+			<iframe src="map/?track=all" frameborder="0"></iframe>
+			<div class="mask"></div>
+		</div>
 		<div class="filter-block closed">
 			<div class="form-head" onclick="toggleFilters()">
 				<h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-filter"><path d="M3 6h18"/><path d="M7 12h10"/><path d="M10 18h4"/></svg>&nbsp;Filtres</h2>
@@ -20,27 +24,28 @@
 				</div>
 			</div>
 			<form id="filters">
-				<div>
-					<label for="direction">Direction : </label>
-					<select name="direction" id="direction"></select>
-	
-					<label for="depart">Départ</label>
-					<select name="depart" id="depart"></select>
+				<div class="filter-entry">
+					<div class="filter-item">
+						<label for="direction">Direction : </label>
+						<select name="direction" id="direction"></select>
+					</div>
+					<div class="filter-item">
+						<label for="depart">Départ</label>
+						<select name="depart" id="depart"></select>
+					</div>
 				</div>
 				
-
-				<br/>
-				<div>
-					<label for="distance-min">Distance minimum :</label>
-					<input type="number" min="0" name="distance-min" id="distance-min">
-	
-					<label for="distance-max">Distance maximum :</label>
-					<input type="number" min="0" name="distance-max" id="distance-max">
+				<div class="filter-entry">
+					<div class="filter-item">
+						<label for="distance-min">Distance minimum :</label>
+						<input type="number" min="0" name="distance-min" id="distance-min">
+					</div>
+					<div class="filter-item">
+						<label for="distance-max">Distance maximum :</label>
+						<input type="number" min="0" name="distance-max" id="distance-max">
+					</div>
 				</div>
 			</form>
-		</div>
-		<div class="global-map">
-			<iframe src="map/?track=all" frameborder="0"></iframe>
 		</div>
 		<div id="tracks-counter"></div>
 		

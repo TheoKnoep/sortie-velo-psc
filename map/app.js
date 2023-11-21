@@ -9,7 +9,8 @@ document.polylines = [];
 document.active_polyline = null; 
 
 
-const TRACK_COLOR = "#ed143db5"; 
+let TRACK_COLOR = "#ed143d9c"; 
+
 
 
 let mapOptions = {

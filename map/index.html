@@ -61,7 +61,6 @@
 
         async function handleRequest() {
             let param_from_url = new URLSearchParams(location.search); 
-
             let required_track = param_from_url.get('track'); 
 
             if (!required_track) {
@@ -77,6 +76,7 @@
                 })
             } else {
                 array_of_path.push(`../tracks/${required_track}.gpx`); 
+                TRACK_COLOR = "#ed143d"; 
             }
 
 
@@ -135,7 +135,6 @@
                     } else {
                         document.querySelector('.track-info').innerHTML = ''; 
                     }
-                    
                 })
 
                 // masquer ou non les traces en fonctions de filtres : 
@@ -144,6 +143,7 @@
                     let connect_id = poly.feature.properties.name.split('/')[2].split('.gpx')[0]; 
                     console.log('id of target event : ', connect_id); 
                     console.log(event.customData.indexOf(connect_id)); 
+                    document.querySelector('.track-info').innerHTML = ''; 
                     if (event.customData.indexOf(connect_id) < 0) { // l'id de la track n'est pas dans le tableau des ID à garder :
                         poly.setStyle({color: 'transparent', weight: 0}).bringToBack(); 
                     } else {

@@ -62,10 +62,20 @@ main h1 {
 }
 
 
+.global-map {
+	position: relative;
+	height: 580px;
+}
 .global-map iframe {
 	border-radius: 8px;
 	width: 100%;
 	height: 580px;
+	position: absolute;
+}
+.global-map .mask {
+	width: 100%;
+	height: 580px;
+	position: absolute;
 }
 
 
@@ -114,6 +124,17 @@ main h1 {
 .filter-block.closed .expand-icon {
 	transform: rotate(-180deg);
 }
+
+.filter-block #filters .filter-entry {
+	display: flex;
+	flex-wrap: wrap; 
+	margin-top: 1em;
+}
+
+.filter-block #filters .filter-item {
+	margin-right: 1em;
+}
+
 
 .filter-block #filters select {
 	border: solid 2px #e1e1e1;
