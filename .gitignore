@@ -1,2 +1,5 @@
 .env
-debug.php
+.*
+
+!.gitignore
+!.env.EXAMPLE
