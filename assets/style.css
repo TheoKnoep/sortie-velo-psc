@@ -72,8 +72,9 @@ main > * {
 } 
 
 
-h1, h2, h3 {
-	font-family: 'Dosis','Titillium Web','Bebas Neue';
+h1 {
+	font-family: 'Dosis';
+	font-size: 3.6em;
 }
 
 main h1 {
@@ -215,6 +216,10 @@ main h1 {
 }
 
 
+.main-line .title, .main-line .text-container {
+	font-size: 1rem;
+}
+
 .main-line .title {
 	display: flex;
 	align-items: center;
@@ -300,6 +305,10 @@ main h1 {
 /* RESPONSIVE */
 
 @media screen and (max-width: 720px) {
+	h1 {
+		font-family: 'Dosis';
+		font-size: 2em;
+	}
 	main {
 		width: 100%; 
 	}
