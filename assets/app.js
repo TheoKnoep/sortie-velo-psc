@@ -2,7 +2,7 @@
 let channel = new BroadcastChannel('filter-map'); 
 const APP_CONTAINER = document.querySelector('.tracks-block'); 
 // const PATH = "sortie-velo-psc"; 
-const PATH = location.href.split(location.origin)[1].split('/')[1]; 
+const PATH = getPathOfURL(location); 
 
 
 const ICONS = {
@@ -359,3 +359,24 @@ function toggleFilters() {
 
 
 
+
+
+/**
+ * détecte automatiquement le path d'une URL :
+ */
+function getPathOfURL(url) {
+    let typeOfParam = 'unkown'; 
+    if (typeof url === 'string') { typeOfParam = 'String' }
+    else if(url instanceof URL) { typeOfParam = 'URL' }
+    else if(url instanceof Location) { typeOfParam = 'Location' }
+
+    url = new URL(url); 
+    let pathname = url.pathname; 
+
+    if (pathname.substr(pathname.length-1, pathname.length) !== '/') {
+        // le pathname ne termine par un nom de fichier ou une requete
+        let index = pathname.lastIndexOf('/'); 
+        pathname = pathname.slice(0, index+1); 
+    }
+    return pathname.slice(1,-1);
+}
