@@ -7,11 +7,20 @@ Autoload::load('modules');
 
 
 // fetch source data
-$importer = new DataImporter( $_SERVER['SHEET_SOURCE'] ); 
+$importer = new DataImporter( $_SERVER['DATA_SOURCE'] ); 
 $csv = $importer->importCSV(); 
 
 
 // check if any new content : 
+	// verif if exists : 
+	$directory = 'cache/';
+	$file = 'datahash.txt';
+	if (!is_dir($directory)) {
+		mkdir($directory, 0755, true); // Crée le répertoire s'il n'existe pas
+	}
+	$file_path = $directory . $file;
+	if (!file_exists($file_path)) { fopen($file_path, 'a'); }
+
 $inital_hash = file_get_contents('cache/datahash.txt'); 
 $new_data_hash = md5($csv); 
 
@@ -20,6 +29,7 @@ if ($inital_hash === $new_data_hash) {
 	exit; 
 } else {
 	echo "data_changed"; 
+	// update : 
 	file_put_contents('cache/datahash.txt', $new_data_hash); // update cached data hash
 }
 

@@ -1,7 +1,8 @@
 <?php
 
 class GPXfromGarminConnect {
-	const FOLDER = 'sortie-velo-psc/tracks'; 
+	const FOLDER = __DIR__ . '/../tracks'; 
+
 	/**
 	 * @param string URL du parcours sur Garmin Connect
 	 */
@@ -10,10 +11,21 @@ class GPXfromGarminConnect {
 		return $this; 
 	}
 
+	public function test() {
+		echo $this::FOLDER . '<br/>';
+		$existing_tracks_files = glob(GPXfromGarminConnect::FOLDER . '/*');
+		
+		$existing = []; 
+		foreach($existing_tracks_files as $file) {
+			$existing[] = basename($file); 
+		}
+		print_r($existing);  
+	}
+
 	public function getGPX($force_new_fetch = false) {
 		$_course_id = $this->getID(); 
 
-		$existing_tracks_files = glob($_SERVER['DOCUMENT_ROOT'] . '/'. GPXfromGarminConnect::FOLDER . '/*'); 
+		$existing_tracks_files = glob(GPXfromGarminConnect::FOLDER . '/*'); 
 		$existing = []; 
 		foreach($existing_tracks_files as $file) {
 			$existing[] = basename($file); 
