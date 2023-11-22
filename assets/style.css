@@ -98,6 +98,10 @@ main h1 {
 	position: absolute;
 }
 
+.global-map, .track-view {
+	background-image: url(images/loading.gif);
+    background-size: cover;
+}
 
 
 .filter-block {
