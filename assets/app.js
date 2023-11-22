@@ -1,6 +1,8 @@
 
 let channel = new BroadcastChannel('filter-map'); 
 const APP_CONTAINER = document.querySelector('.tracks-block'); 
+// const PATH = "sortie-velo-psc"; 
+const PATH = location.href.split(location.origin)[1].split('/')[1]; 
 
 
 const ICONS = {
@@ -31,7 +33,7 @@ const TEMPLATES = {
 
 			</div>
 			<div class="secondary-line">
-				<a class="button-link gpx-link" href="${location.origin + '/sortie-velo-psc/tracks/' + data['connect_id'] + '.gpx'}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>&nbsp;.GPX</a>
+				<a class="button-link gpx-link" href="${location.origin + '/' + PATH + '/tracks/' + data['connect_id'] + '.gpx'}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>&nbsp;.GPX</a>
 				<a class="button-link garmin-connect-link" href="${data['Lien garmin connect']}" target="_blank"><span style="background-image: url('assets/images/ico-connect.png'); width: 16px; height: 16px;"></span>&nbsp;Garmin Connect</a>
 			</div>
 		</div>`; 
@@ -83,8 +85,8 @@ function initialLoad() {
 
 function displayMap(target, connect_id, dimension) {
 	let template = `<div class="track-view" style="position: relative; height: ${dimension+10}px;">
-		<iframe src="${location.origin}/sortie-velo-psc/map/?track=${connect_id}" frameborder="0" width="${dimension}" height="${dimension}" scrolling="no" style="position: absolute; border-radius: 8px;"></iframe>
-		<div class="mask" onclick="window.open('${location.origin}/sortie-velo-psc/map/?track=${connect_id}&size=fullscreen', '_blank');" style="width: ${dimension}px; height: ${dimension}px; position: absolute; cursor: pointer; "></div>
+		<iframe src="${location.origin}/${PATH}/map/?track=${connect_id}" frameborder="0" width="${dimension}" height="${dimension}" scrolling="no" style="position: absolute; border-radius: 8px;"></iframe>
+		<div class="mask" onclick="window.open('${location.origin}/${PATH}/map/?track=${connect_id}&size=fullscreen', '_blank');" style="width: ${dimension}px; height: ${dimension}px; position: absolute; cursor: pointer; "></div>
 		<div class="ico-expand" style="position: absolute; top: 3px; right: 3px; z-index: 1;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-expand"><path d="m21 21-6-6m6 6v-4.8m0 4.8h-4.8"/><path d="M3 16.2V21m0 0h4.8M3 21l6-6"/><path d="M21 7.8V3m0 0h-4.8M21 3l-6 6"/><path d="M3 7.8V3m0 0h4.8M3 3l6 6"/></svg></div>
 	</div>`; 
 	target.innerHTML = ''; 
