@@ -52,9 +52,9 @@ window.addEventListener('DOMContentLoaded', initialLoad);
 fetch('synchronize.php')
 .then(res => res.text()) 
 .then(text => {
-	// console.log(text); 
+	console.log(text); 
 	if (text === 'data_changed') {
-		new Snackbar(`<div style="display: flex; align-items: center; justify-content: space-between"><span>De nouvelles traces sont disponibles</span><a style="margin-left: auto; font-style: italic;" href="javascript:initialLoad()">Recharger la page ?</a></div>`).display({delay: 10000}); 
+		new Snackbar(`<div style="display: flex; align-items: center; justify-content: space-between"><span>De nouvelles traces sont disponibles</span><a style="margin-left: auto; font-style: italic;" href="javascript:initialLoad(true)">Recharger la page ?</a></div>`).display({delay: 10000}); 
 	}
 }); 
 
@@ -62,7 +62,7 @@ fetch('synchronize.php')
 
 
 
-function initialLoad() {
+function initialLoad(reload = false) {
 	fetch('data.json')
 	.then(res => res.json())
 	.then(json => {
@@ -80,6 +80,12 @@ function initialLoad() {
 		document.querySelectorAll('.map-container').forEach(map => {
 			displayMap(map, map.dataset.connectId, 120); 
 		})
+
+		if (reload) {
+			// reload global map ifram content : 
+			let iframe = document.querySelector('.global-map iframe'); 
+			iframe.contentDocument.location.reload();
+		}
 	}); 
 }
 

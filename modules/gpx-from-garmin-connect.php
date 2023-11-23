@@ -49,7 +49,7 @@ class GPXfromGarminConnect {
 	}
 
 	private function saveToServer($_course_id, $gpx_content) {
-		$file_to_path = $_SERVER['DOCUMENT_ROOT'] . '/'. GPXfromGarminConnect::FOLDER . '/' . $_course_id . '.gpx';
+		$file_to_path = GPXfromGarminConnect::FOLDER . '/' . $_course_id . '.gpx';
 		$content = $gpx_content; 
 		file_put_contents($file_to_path, $content); 
 	}

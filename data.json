@@ -430,5 +430,29 @@
             }
         },
         "_id": 17
+    },
+    {
+        "Distance": "117",
+        "Denivele": "850",
+        "Direction": "Vexin",
+        "RDV": "Bastille",
+        "Notes": "Sortie exigeante dans le Vexin",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/239481465",
+        "connect_id": "239481465",
+        "details": {
+            "name": "Sortie Vexin 117k",
+            "distance": {
+                "value": 117.159,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 872,
+                "unit": "m"
+            },
+            "score": {
+                "value": 55
+            }
+        },
+        "_id": 18
     }
 ]
