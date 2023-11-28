@@ -25,19 +25,28 @@ $inital_hash = file_get_contents('cache/datahash.txt');
 $new_data_hash = md5($csv); 
 
 if ($inital_hash === $new_data_hash) {
-	echo "Les données n'ont pas changées"; 
+	// echo "Les données n'ont pas changées"; 
 	exit; 
 } else {
 	echo "data_changed"; 
-	// update : 
-	file_put_contents('cache/datahash.txt', $new_data_hash); // update cached data hash
+}
+
+// check if csv is right format : 
+$csvParser = new CSVParser($csv);
+
+try {
+	$constraintOnHeaders = "Distance,Dénivelé ,Direction,RDV,Notes,Lien garmin connect";
+	$csvParser->verifyHeaders($constraintOnHeaders); 
+} catch (Exception $err) {
+	echo "invalid_imported_csv_header"; 
+	exit; 
 }
 
 
 
 // 2. Enrichissement des données. 
-$ARRAY_OF_DATA = (new CSVParser($csv))->csvToArray();
-
+$forcedHeaders = ['Distance', 'Denivele', 'Direction', 'RDV', 'Notes', 'Lien garmin connect']; 
+$ARRAY_OF_DATA = $csvParser->csvToArray($forcedHeaders);
 
 $id_settler = 0; 
 foreach($ARRAY_OF_DATA as &$item) {
@@ -63,6 +72,8 @@ unset($item);
 $data_json = json_encode($ARRAY_OF_DATA, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE); 
 file_put_contents('data.json', $data_json); 
 
+// update cachehash : 
+file_put_contents('cache/datahash.txt', $new_data_hash); 
 
 
 
