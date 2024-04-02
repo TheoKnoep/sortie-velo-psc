@@ -1,9 +1,19 @@
 <?php
 
+require 'vendor/autoload.php'; 
+
+use Theoknoep\GpxDifficultyScore\GpxDifficultyScore; 
+use Symfony\Component\Dotenv\Dotenv;
+
+$dotenv = new Dotenv();
+$dotenv->load(__DIR__.'/.env');
+
+
 require 'autoload.php'; 
 Autoload::load('modules'); 
 
-(new DotEnv(__DIR__ . '/.env'))->load(); 
+
+
 
 
 // fetch source data
@@ -54,7 +64,8 @@ foreach($ARRAY_OF_DATA as &$item) {
 	$connect_id = $fromGarmin->getID(); 
 	$fromGarmin->getGPX(); 
 
-	$more_details_about_track = GPXParser::parse("tracks/$connect_id.gpx"); 
+	// $more_details_about_track = GPXParser::parse("tracks/$connect_id.gpx"); 
+	$more_details_about_track = GpxDifficultyScore::parse("tracks/$connect_id.gpx"); 
 
 	$item['Direction'] = ucfirst(trim($item['Direction']));
 	$item['RDV'] = ucfirst(trim($item['RDV']));

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "theoknoep/gpx-difficulty-score": "dev-master",
+        "symfony/dotenv": "^6.4"
+    }
+}

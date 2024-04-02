@@ -1,97 +1,105 @@
 [
     {
-        "Distance": "70",
-        "Denivele": "400",
+        "Distance": "40",
+        "Denivele": "100",
         "Direction": "Est",
         "RDV": "Poly",
-        "Notes": "70km S&M Aller Champigny retour Chennevièvre",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/210494863",
-        "connect_id": "210494863",
+        "Notes": "Tour de 40km bois de vincenne + boucle de la marne",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/142708260",
+        "connect_id": "142708260",
         "details": {
-            "name": "Boucle 70km PSC",
+            "name": "40km_Boucles_Vincennes_Marne",
             "distance": {
-                "value": 79.438,
+                "value": 40.916,
                 "unit": "km"
             },
             "elevation": {
-                "value": 370,
+                "value": 117,
                 "unit": "m"
             },
             "score": {
-                "value": 9
-            }
+                "value": 0,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": true
         },
         "_id": 0
     },
     {
-        "Distance": "80",
-        "Denivele": "600",
-        "Direction": "Chevreuse",
-        "RDV": "Cité U",
-        "Notes": "Passage en chvreuse rapide - 7 côtes",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/145454973",
-        "connect_id": "145454973",
+        "Distance": "45",
+        "Denivele": "150",
+        "Direction": "Est",
+        "RDV": "Stalingrad",
+        "Notes": "Trace tranquille pas trop longue, aller par le canal, retour par les bords de Marne",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/239248302",
+        "connect_id": "239248302",
         "details": {
-            "name": "Mini Chevreuse",
+            "name": "De l'Ourcq à la Marne",
             "distance": {
-                "value": 81.899,
+                "value": 45.604,
                 "unit": "km"
             },
             "elevation": {
-                "value": 722,
+                "value": 170,
                 "unit": "m"
             },
             "score": {
-                "value": 57
-            }
+                "value": 4,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": false
         },
         "_id": 1
     },
     {
-        "Distance": "65",
-        "Denivele": "400",
+        "Distance": "50",
+        "Denivele": "200",
         "Direction": "Est",
         "RDV": "Poly",
-        "Notes": "Tour classique en S&M par Chennevievre",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/238072070",
-        "connect_id": "238072070",
+        "Notes": "boucle S&M classique par Chennevièvre",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/134568464",
+        "connect_id": "134568464",
         "details": {
-            "name": "65KM_SETM",
+            "name": "47km_S&M",
             "distance": {
-                "value": 65.295,
+                "value": 46.974,
                 "unit": "km"
             },
             "elevation": {
-                "value": 386,
+                "value": 221,
                 "unit": "m"
             },
             "score": {
-                "value": 17
-            }
+                "value": 12,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": true
         },
         "_id": 2
     },
     {
-        "Distance": "119",
-        "Denivele": "800",
-        "Direction": "Ouest",
-        "RDV": "Porte bercy",
-        "Notes": "Plus de souvenir - à recommenter",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/182515699",
-        "connect_id": "182515699",
+        "Distance": "50",
+        "Denivele": "200",
+        "Direction": "Est",
+        "RDV": "Stalingrad",
+        "Notes": "A\/R canal + variante sur la route stratégique avec deux belles côtes dans le bois pour une sortie pas trop longue",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/239245855",
+        "connect_id": "239245855",
         "details": {
-            "name": "119kmversSE",
+            "name": "Tour de la route stratégique - Bois de Bernouille",
             "distance": {
-                "value": 119.168,
+                "value": 47.234,
                 "unit": "km"
             },
             "elevation": {
-                "value": 779,
+                "value": 214,
                 "unit": "m"
             },
             "score": {
-                "value": 45
-            }
+                "value": 10,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": true
         },
         "_id": 3
     },
@@ -114,8 +122,10 @@
                 "unit": "m"
             },
             "score": {
-                "value": 14
-            }
+                "value": 14,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": true
         },
         "_id": 4
     },
@@ -138,58 +148,90 @@
                 "unit": "m"
             },
             "score": {
-                "value": 19
-            }
+                "value": 19,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": true
         },
         "_id": 5
     },
     {
-        "Distance": "40",
-        "Denivele": "100",
+        "Distance": "65",
+        "Denivele": "400",
         "Direction": "Est",
         "RDV": "Poly",
-        "Notes": "Tour de 40km bois de vincenne + boucle de la marne",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/142708260",
-        "connect_id": "142708260",
+        "Notes": "Tour classique en S&M par Chennevievre",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/238072070",
+        "connect_id": "238072070",
         "details": {
-            "name": "40km_Boucles_Vincennes_Marne",
+            "name": "65KM_SETM",
             "distance": {
-                "value": 40.916,
+                "value": 65.295,
                 "unit": "km"
             },
             "elevation": {
-                "value": 117,
+                "value": 386,
                 "unit": "m"
             },
             "score": {
-                "value": 0
-            }
+                "value": 17,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": true
         },
         "_id": 6
     },
     {
-        "Distance": "80",
+        "Distance": "70",
         "Denivele": "400",
         "Direction": "Est",
         "RDV": "Poly",
-        "Notes": "Alternative au classique tour en seine et marne",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/141874736",
-        "connect_id": "141874736",
+        "Notes": "70km S&M Aller Champigny retour Chennevièvre",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/210494863",
+        "connect_id": "210494863",
         "details": {
-            "name": "De Polygone Vincennes à Côte de Tigeaux",
+            "name": "Boucle 70km PSC",
             "distance": {
-                "value": 81.361,
+                "value": 79.438,
                 "unit": "km"
             },
             "elevation": {
-                "value": 424,
+                "value": 370,
                 "unit": "m"
             },
             "score": {
-                "value": 20
-            }
+                "value": 9,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": true
         },
         "_id": 7
+    },
+    {
+        "Distance": "70",
+        "Denivele": "200",
+        "Direction": "Est",
+        "RDV": "Stalingrad",
+        "Notes": "70 km plats, passage par la piste cyclable qui longe le côté sud de l'aéroport Charles de Gaulle, portion agréable éloignée de la route, et retour classique par le canal de l'Ourcq",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/250803062",
+        "connect_id": "250803062",
+        "details": {
+            "name": "[70k] Piste de l'aéroport - Nantouillet - Retour canal",
+            "distance": {
+                "value": 69.067,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 221,
+                "unit": "m"
+            },
+            "score": {
+                "value": 1,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": true
+        },
+        "_id": 8
     },
     {
         "Distance": "77",
@@ -210,10 +252,64 @@
                 "unit": "m"
             },
             "score": {
-                "value": 20
-            }
+                "value": 20,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": false
         },
-        "_id": 8
+        "_id": 9
+    },
+    {
+        "Distance": "80",
+        "Denivele": "600",
+        "Direction": "Chevreuse",
+        "RDV": "Cité U",
+        "Notes": "Passage en chevreuse rapide - 7 côtes",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/145454973",
+        "connect_id": "145454973",
+        "details": {
+            "name": "Mini Chevreuse",
+            "distance": {
+                "value": 81.899,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 722,
+                "unit": "m"
+            },
+            "score": {
+                "value": 57,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": false
+        },
+        "_id": 10
+    },
+    {
+        "Distance": "80",
+        "Denivele": "400",
+        "Direction": "Est",
+        "RDV": "Poly",
+        "Notes": "Alternative au classique tour en seine et marne",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/141874736",
+        "connect_id": "141874736",
+        "details": {
+            "name": "De Polygone Vincennes à Côte de Tigeaux",
+            "distance": {
+                "value": 81.361,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 424,
+                "unit": "m"
+            },
+            "score": {
+                "value": 20,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": true
+        },
+        "_id": 11
     },
     {
         "Distance": "80",
@@ -234,58 +330,12 @@
                 "unit": "m"
             },
             "score": {
-                "value": 21
-            }
+                "value": 21,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": true
         },
-        "_id": 9
-    },
-    {
-        "Distance": "50",
-        "Denivele": "200",
-        "Direction": "Est",
-        "RDV": "Poly",
-        "Notes": "boucle S&M classique par Chennevièvre",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/134568464",
-        "connect_id": "134568464",
-        "details": {
-            "name": "47km_S&M",
-            "distance": {
-                "value": 46.974,
-                "unit": "km"
-            },
-            "elevation": {
-                "value": 221,
-                "unit": "m"
-            },
-            "score": {
-                "value": 12
-            }
-        },
-        "_id": 10
-    },
-    {
-        "Distance": "100",
-        "Denivele": "500",
-        "Direction": "Est",
-        "RDV": "Stalingrad",
-        "Notes": "Direction disney retour par le poly",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/135374184",
-        "connect_id": "135374184",
-        "details": {
-            "name": "100kmCanal-Disney-poly",
-            "distance": {
-                "value": 100.009,
-                "unit": "km"
-            },
-            "elevation": {
-                "value": 514,
-                "unit": "m"
-            },
-            "score": {
-                "value": 20
-            }
-        },
-        "_id": 11
+        "_id": 12
     },
     {
         "Distance": "80",
@@ -306,58 +356,12 @@
                 "unit": "m"
             },
             "score": {
-                "value": 20
-            }
-        },
-        "_id": 12
-    },
-    {
-        "Distance": "110",
-        "Denivele": "1000",
-        "Direction": "Ouest",
-        "RDV": "Cité U",
-        "Notes": "Beau tour en Chevreuse",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/117247220",
-        "connect_id": "117247220",
-        "details": {
-            "name": "Chevreuse 108km\/1000D",
-            "distance": {
-                "value": 108.264,
-                "unit": "km"
+                "value": 20,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
             },
-            "elevation": {
-                "value": 1028,
-                "unit": "m"
-            },
-            "score": {
-                "value": 84
-            }
+            "loop": false
         },
         "_id": 13
-    },
-    {
-        "Distance": "90",
-        "Denivele": "300",
-        "Direction": "Est",
-        "RDV": "Stalingrad",
-        "Notes": "A\/R canal",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/102418965",
-        "connect_id": "102418965",
-        "details": {
-            "name": "Canal de l'Ourq 90km",
-            "distance": {
-                "value": 88.67,
-                "unit": "km"
-            },
-            "elevation": {
-                "value": 362,
-                "unit": "m"
-            },
-            "score": {
-                "value": 10
-            }
-        },
-        "_id": 14
     },
     {
         "Distance": "80",
@@ -378,56 +382,88 @@
                 "unit": "m"
             },
             "score": {
-                "value": 69
-            }
+                "value": 69,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": false
+        },
+        "_id": 14
+    },
+    {
+        "Distance": "90",
+        "Denivele": "300",
+        "Direction": "Est",
+        "RDV": "Stalingrad",
+        "Notes": "A\/R canal",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/102418965",
+        "connect_id": "102418965",
+        "details": {
+            "name": "Canal de l'Ourq 90km",
+            "distance": {
+                "value": 88.67,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 362,
+                "unit": "m"
+            },
+            "score": {
+                "value": 10,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": true
         },
         "_id": 15
     },
     {
-        "Distance": "50",
-        "Denivele": "200",
+        "Distance": "100",
+        "Denivele": "500",
         "Direction": "Est",
         "RDV": "Stalingrad",
-        "Notes": "A\/R canal + variante sur la route stratégique avec deux belles côtes dans le bois pour une sortie pas trop longue",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/239245855",
-        "connect_id": "239245855",
+        "Notes": "Direction disney retour par le poly",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/135374184",
+        "connect_id": "135374184",
         "details": {
-            "name": "Tour de la route stratégique - Bois de Bernouille",
+            "name": "100kmCanal-Disney-poly",
             "distance": {
-                "value": 47.234,
+                "value": 100.009,
                 "unit": "km"
             },
             "elevation": {
-                "value": 214,
+                "value": 514,
                 "unit": "m"
             },
             "score": {
-                "value": 10
-            }
+                "value": 20,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": false
         },
         "_id": 16
     },
     {
-        "Distance": "45",
-        "Denivele": "150",
-        "Direction": "Est",
-        "RDV": "Stalingrad",
-        "Notes": "Trace tranquille pas trop longue, aller par le canal, retour par les bords de Marne",
-        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/239248302",
-        "connect_id": "239248302",
+        "Distance": "110",
+        "Denivele": "1000",
+        "Direction": "Ouest",
+        "RDV": "Cité U",
+        "Notes": "Beau tour en Chevreuse",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/117247220",
+        "connect_id": "117247220",
         "details": {
-            "name": "De l'Ourcq à la Marne",
+            "name": "Chevreuse 108km\/1000D",
             "distance": {
-                "value": 45.604,
+                "value": 108.264,
                 "unit": "km"
             },
             "elevation": {
-                "value": 170,
+                "value": 1028,
                 "unit": "m"
             },
             "score": {
-                "value": 4
-            }
+                "value": 84,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": false
         },
         "_id": 17
     },
@@ -450,9 +486,37 @@
                 "unit": "m"
             },
             "score": {
-                "value": 55
-            }
+                "value": 55,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": true
         },
         "_id": 18
+    },
+    {
+        "Distance": "119",
+        "Denivele": "800",
+        "Direction": "Ouest",
+        "RDV": "Porte bercy",
+        "Notes": "Plus de souvenir - à recommenter",
+        "Lien garmin connect": "https:\/\/connect.garmin.com\/modern\/course\/182515699",
+        "connect_id": "182515699",
+        "details": {
+            "name": "119kmversSE",
+            "distance": {
+                "value": 119.168,
+                "unit": "km"
+            },
+            "elevation": {
+                "value": 779,
+                "unit": "m"
+            },
+            "score": {
+                "value": 45,
+                "details": "<p>Le score de difficulté est une mesure arbitraire de la difficulté théorique d'un parcours. À distance équivalente, il permet d'avoir une idée de quel parcours sera le plus exigeant.<p><em>Il n'est pas lié à la longueur du parcours mais aux côtes et ascensions qui le composent.<\/em><p>Le calcul se base sur la formule de difficulté d'une ascension utilisée par <a href='https:\/\/www.procyclingstats.com\/info\/profile-score-explained' target='_blank'>ProCyclingStats<\/a> pour sa propre classification des parcours de course. Un score de difficulté est calculé pour chaque partie montante du parcours selon la formule :<blockquote><p>[(pente\/2)^2] * [longueur en km]<\/blockquote><p>La somme de ces scores donne le score du parcours.<p><em>Remarque : il serait peut-être pertinent d'appliquer un coefficient à chaque score individuel de côte en fonction de leur emplacement dans le parcours (après tant de kilomètres, rapproché d'autres côtes, etc.). Cela mériterait un mode de calcul plus fin, qui n'est pas géré ici.<\/em>"
+            },
+            "loop": false
+        },
+        "_id": 19
     }
 ]

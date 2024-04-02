@@ -3,3 +3,7 @@
 
 !.gitignore
 !.env.EXAMPLE
+
+/vendor/
+/cache/
+/tracks/
